@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita do Dia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="auth-section">
+        <div class="container">
+            <h2>Entre ou Cadastre-se</h2>
+            <form id="login-form">
+                <input type="text" id="login-username" placeholder="Nome de Usuário" required>
+                <input type="password" id="login-password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <button id="show-register-form-btn">Ainda não tem conta? Cadastre-se</button>
+
+            <form id="register-form" style="display: none;">
+                <input type="text" id="register-username" placeholder="Nome de Usuário" required>
+                <input type="password" id="register-password" placeholder="Senha" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="app-content" style="display: none;">
+        <div class="container">
+            <h1>Receita do Dia</h1>
+            <img id="recipe-image" src="https://via.placeholder.com/600/FF5733" alt="Imagem da Receita">
+            <h2 id="recipe-title">Torta de Frango Cremosa</h2>
+            <p id="recipe-text">Uma deliciosa torta com recheio cremoso de frango. Perfeita para qualquer ocasião! Ingredientes: 1 peito de frango, 1 lata de creme de leite, 1 massa de torta. Modo de preparo: Cozinhe e desfie o frango, misture com o creme de leite e recheie a massa. Asse por 30 minutos.</p>
+            <button id="change-recipe-btn">Ver Outra Receita</button>
+
+            <div class="add-recipe-section">
+                <h2>Adicionar Nova Receita</h2>
+                <form id="add-recipe-form">
+                    <input type="text" id="new-recipe-title" placeholder="Título da Receita" required>
+                    <input type="text" id="new-recipe-image" placeholder="URL da Imagem" required>
+                    <textarea id="new-recipe-text" placeholder="Ingredientes e Modo de Preparo" rows="4" required></textarea>
+                    <button type="submit" id="add-recipe-btn">Adicionar Receita</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
