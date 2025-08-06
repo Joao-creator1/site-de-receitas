@@ -1,4 +1,4 @@
-// A lista de receitas que vamos usar no nosso site
+
 const recipes = [
     {
         title: "Torta de Frango Cremosa",
@@ -17,7 +17,7 @@ const recipes = [
     }
 ];
 
-// Pegamos os elementos HTML para a lógica das receitas
+
 const recipeTitle = document.getElementById('recipe-title');
 const recipeImage = document.getElementById('recipe-image');
 const recipeText = document.getElementById('recipe-text');
@@ -27,10 +27,10 @@ const newRecipeImageInput = document.getElementById('new-recipe-image');
 const newRecipeTextInput = document.getElementById('new-recipe-text');
 const addRecipeForm = document.getElementById('add-recipe-form');
 
-// Variável para saber qual receita está sendo exibida no momento
+
 let currentRecipeIndex = 0;
 
-// Função para atualizar a receita na tela
+
 function updateRecipe() {
     const currentRecipe = recipes[currentRecipeIndex];
     recipeTitle.textContent = currentRecipe.title;
@@ -38,16 +38,15 @@ function updateRecipe() {
     recipeText.textContent = currentRecipe.text;
 }
 
-// Função para mudar a receita
 function changeRecipe() {
     currentRecipeIndex = (currentRecipeIndex + 1) % recipes.length;
     updateRecipe();
 }
 
-// Adiciona "ouvinte de evento" ao botão de mudar receita
+
 changeRecipeBtn.addEventListener('click', changeRecipe);
 
-// Adiciona "ouvinte de evento" ao formulário de adicionar receita
+
 addRecipeForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -63,11 +62,10 @@ addRecipeForm.addEventListener('submit', function(event) {
     addRecipeForm.reset();
 });
 
-// Pegamos os elementos HTML para a lógica de login e cadastro
 const authSection = document.getElementById('auth-section');
-// Pegamos os elementos HTML para a lógica de login e cadastro
+
 const appContent = document.getElementById('app-content');
-// ...resto do código...
+
 const loginForm = document.getElementById('login-form');
 const registerForm = document.getElementById('register-form');
 const showRegisterFormBtn = document.getElementById('show-register-form-btn');
@@ -76,13 +74,12 @@ const loginPasswordInput = document.getElementById('login-password');
 const registerUsernameInput = document.getElementById('register-username');
 const registerPasswordInput = document.getElementById('register-password');
 
-// Exibe o formulário de cadastro quando o botão é clicado
+
 showRegisterFormBtn.addEventListener('click', () => {
     loginForm.style.display = 'none';
     registerForm.style.display = 'block';
 });
 
-// Lida com o evento de submissão do formulário de login
 loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const username = loginUsernameInput.value;
@@ -111,7 +108,7 @@ loginForm.addEventListener('submit', async (e) => {
     }
 });
 
-// Lida com o evento de submissão do formulário de cadastro
+
 registerForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const username = registerUsernameInput.value;
@@ -141,5 +138,5 @@ registerForm.addEventListener('submit', async (e) => {
 });
 
 
-// Chama a função pela primeira vez para exibir a primeira receita quando a página carregar
+
 updateRecipe();
